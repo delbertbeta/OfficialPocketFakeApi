@@ -2,8 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.use((req, res, next) => {
-
-  if (!process.addedCatagory) {
+  if (!process.subscribed) {
     res.send({
       code: 0,
       data: [{
