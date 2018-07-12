@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.use((req, res, next) => {
-  if (!process.subscribed) {
+  if (!global.subscribed) {
     res.send({
       code: 0,
       data: [{
